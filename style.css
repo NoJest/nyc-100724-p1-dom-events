@@ -1,7 +1,11 @@
-/* grey ---> #B5B6B5 */
-/* border grey ---> #686668 */
-/* dark blue ---> #0E046C */
-/* light blue ---> #2A5B93 */
+:root {
+  --grey: #B5B6B5;
+  --border-grey: #686668;
+  --dark-blue: #0E046C;
+  --light-blue: #2A5B93;
+}
+
+
 
 * {
   font-family: "Times New Roman", Times, sans-serif;
@@ -15,19 +19,19 @@ body {
 
 button, input[type=submit] {
   border-radius: 0;
-  background-color: #B5B6B5;
+  background-color: var(--grey);
 }
 
 #message-window {
-  background-color: #B5B6B5;
-  border: solid #686668 2px;
+  background-color: var(--grey);
+  border: solid var(--border-grey);
   min-height: 400px;
   position: absolute;
   min-width: 500px;
 }
 
 .window-bar {
-  background-image: linear-gradient(270deg, #2A5B93, #0E046C);
+  background-image: linear-gradient(270deg, var(--dark-blue), var(--light-blue));
   width: 100%;
 }
 
@@ -53,7 +57,7 @@ button, input[type=submit] {
 
 .messages {
   background-color: white;
-  border: solid #686668 2px;
+  border: solid var(--border-grey) 2px;
   padding: 0.3em;
   position: relative;
   left: 50%;
