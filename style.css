@@ -1,0 +1,78 @@
+/* grey ---> #B5B6B5 */
+/* border grey ---> #686668 */
+/* dark blue ---> #0E046C */
+/* light blue ---> #2A5B93 */
+
+* {
+  font-family: "Times New Roman", Times, sans-serif;
+}
+
+body {
+  background-image: url(https://d7hftxdivxxvm.cloudfront.net/?height=630&quality=80&resize_to=fill&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F2P6t_Yt6dF0TNN76dlp-_Q%252F3417757448_4a6bdf36ce_o.jpg&width=1200);
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+}
+
+button, input[type=submit] {
+  border-radius: 0;
+  background-color: #B5B6B5;
+}
+
+#message-window {
+  background-color: #B5B6B5;
+  border: solid #686668 2px;
+  min-height: 400px;
+  position: absolute;
+  min-width: 500px;
+}
+
+.window-bar {
+  background-image: linear-gradient(270deg, #2A5B93, #0E046C);
+  width: 100%;
+}
+
+.window-bar span {
+  color: white;
+}
+
+.window-bar .exit-button {
+  position: absolute;
+  right: 0.1em;
+  top: 0.1em;
+  font-size: 0.5em;
+}
+
+.file-options {
+  margin: 0;
+  margin-left: 3%;
+}
+
+.file-options span {
+  margin-right: 0.5em;
+}
+
+.messages {
+  background-color: white;
+  border: solid #686668 2px;
+  padding: 0.3em;
+  position: relative;
+  left: 50%;
+  margin-top: 0.3em;
+  min-height: 300px;
+  transform: translate(-50%);
+  width: 90%;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.message-form {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.message-form-text {
+  background-color: white;
+}
