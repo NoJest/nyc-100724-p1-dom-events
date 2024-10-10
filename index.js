@@ -5,6 +5,11 @@ const fileButton = document.querySelector('#file')
 let fileOptionsDiv
 const menuOptionsP = document.querySelector('.file-options')
 
+// messenger constants
+const messageForm = document.querySelector('.message-form')
+const messageInput = messageForm.querySelector('input')
+const messageBox = document.querySelector('.messages')
+
 // CALLBACK FUNCTIONS //
 
 function handleExit(event) {
@@ -42,10 +47,33 @@ function handleMouseLeaveFile(event) {
 }
 
 function whoAmI(event) {
-    event.stopPropagation()
+    event.stopPropagation() // should stop the event from bubbling up
     // event propagation
     // or event bubbling
     console.log(event.target)
+}
+
+function handleNewMessage(event) {
+    // stop the page from refreshing
+    event.preventDefault()
+    // get what the user typed
+    const newMessage = messageInput.value
+
+    
+    const newMessageElement = document.createElement('p')
+    newMessageElement.textContent = newMessage
+    
+    const timeStamp = document.createElement('span')
+    timeStamp.className = 'blue-text'
+    // get hours and minutes in a string
+    const now = new Date
+    timeStamp.textContent = `${now.getHours()}:${now.getMinutes()}`
+    newMessageElement.prepend(timeStamp)    
+
+    messageBox.append(newMessageElement)
+
+    // resets the form / empties the input
+    messageForm.reset()
 }
 
 
@@ -61,6 +89,9 @@ fileButton.addEventListener("mouseover", handleMouseOverFile)
 fileButton.addEventListener("mouseleave", handleMouseLeaveFile)
 
 menuOptionsP.addEventListener("click", whoAmI)
+
+// form submit
+messageForm.addEventListener("submit", handleNewMessage)
 
 
 
